@@ -1,0 +1,61 @@
+{
+  "name": "property-observer",
+  "version": "0.0.1",
+  "description": "Property observer.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "nyc mocha",
+    "build": "gulp compile",
+    "watch": "gulp watch"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "author": {
+    "name": "Luca Scarignella",
+    "email": "lucacode1@gmail.com",
+    "url": "https://luca.scaringella.de"
+  },
+  "keywords": [
+    "property",
+    "observer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucaCode/property-observer-js.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/mocha": "5.2.6",
+    "chai": "4.2.0",
+    "gulp": "4.0.1",
+    "gulp-typescript": "5.0.1",
+    "mocha": "6.1.4",
+    "nyc": "14.0.0",
+    "source-map-support": "^0.5.12",
+    "ts-node": "8.1.0",
+    "typescript": "3.4.5"
+  }
+}
